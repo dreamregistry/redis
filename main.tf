@@ -40,3 +40,7 @@ output "REDIS_HOST" {
 output "REDIS_PORT" {
   value = 6379
 }
+
+output "REDIS_TLS" {
+  value = false
+}

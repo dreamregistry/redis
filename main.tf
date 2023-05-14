@@ -21,7 +21,7 @@ resource "random_pet" "container_name" {}
 
 resource "docker_image" "redis" {
   name         = "redis:latest"
-  keep_locally = false
+  keep_locally = true
 }
 
 resource "docker_container" "redis" {

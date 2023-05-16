@@ -29,7 +29,6 @@ resource "docker_container" "redis" {
   image = docker_image.redis.image_id
   ports {
     internal = 6379
-    external = 6379
   }
 }
 
@@ -38,7 +37,7 @@ output "REDIS_HOST" {
 }
 
 output "REDIS_PORT" {
-  value = 6379
+  value = docker_container.redis.ports[0].external
 }
 
 output "REDIS_TLS" {

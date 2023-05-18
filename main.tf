@@ -43,3 +43,7 @@ output "REDIS_PORT" {
 output "REDIS_TLS" {
   value = false
 }
+
+output "REDIS_CONTAINER_NAME" {
+  value = docker_container.redis.name
+}
